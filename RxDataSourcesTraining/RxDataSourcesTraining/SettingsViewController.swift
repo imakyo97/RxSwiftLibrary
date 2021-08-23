@@ -23,7 +23,8 @@ class SettingsViewController: UIViewController {
             let item = dataSource[indexPath]
             switch item {
             case .account, .security, .notification, .contents,
-                 .sounds, .dataUsing, .accessibility:
+                 .sounds, .dataUsing, .accessibility, .credits,
+                 .version, .privacyPolicy:
                 let cell = tableView
                     .dequeueReusableCell(withIdentifier: "cell", for: indexPath)
                 cell.textLabel?.text = item.title
@@ -86,6 +87,12 @@ class SettingsViewController: UIViewController {
                     break
                 case .description:
                     // 遷移させる処理
+                    break
+                case .credits:
+                    break
+                case .version:
+                    break
+                case .privacyPolicy:
                     break
                 }
             })
